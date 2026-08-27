@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Nova Tarefa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold" href="index.html">TaskFlow</a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tarefas.html">Tarefas</a></li>
+                    <li class="nav-item"><a class="nav-link  active" href="cadastro.html">Nova Tarefa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-6">
+                
+                <div class="form-container shadow-lg border-0">
+                    <div class="form-header text-center">
+                        <h2 class="mb-1">✨ Nova Atividade</h2>
+                        <p class="mb-0 opacity-75">Preencha os detalhes para organizar seu dia</p>
+                    </div>
+
+                    <div class="form-body p-4">
+                        <form id="formTarefa">
+                            
+                            <div class="mb-4">
+                                <label for="nometarefa" class="form-label">Título da Tarefa</label>
+                                <input type="text" id="nometarefa" class="form-control form-control-lg" placeholder="Ex: Estudar Banco de Dados" required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="descricaotarefa" class="form-label">Descrição (Opcional)</label>
+                                <textarea id="descricaotarefa" class="form-control" rows="3" placeholder="Detalhe o que precisa ser feito..."></textarea>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <label for="data" class="form-label">📅 Prazo de Entrega</label>
+                                    <input type="date" id="data" class="form-control">
+                                </div>
+
+                                <div class="col-md-6 mb-4">
+                                    <label for="prioridade" class="form-label">🎯 Prioridade</label>
+                                    <select id="prioridade" class="form-select" required>
+                                        <option value="" selected disabled>Selecione...</option>
+                                        <option value="Alta">🔴 Alta</option>
+                                        <option value="Média">🟡 Média</option>
+                                        <option value="Baixa">🟢 Baixa</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label d-block">Estado Inicial</label>
+                                <div class="radio-group d-flex gap-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="status" id="statusPendente" value="Pendente" checked>
+                                        <label class="form-check-label" for="statusPendente">⏳ Pendente</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="status" id="statusConcluida" value="Concluída">
+                                        <label class="form-check-label" for="statusConcluida">✅ Concluída</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-grid gap-2 mt-5">
+                                <button type="submit" class="btn btn-salvar btn-lg text-white">Salvar Tarefa</button>
+                                <button type="reset" class="btn btn-light border">Limpar Campos</button>
+                            </div>
+
+                            <div class="info-card mt-4">
+                                <h6 class="fw-bold"><small>💡 Dica:</small></h6>
+                                <p class="small text-muted mb-0">Tarefas com prioridade <strong>Alta</strong> aparecerão com destaque na sua lista de atividades próximas.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

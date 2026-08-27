@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Minhas Tarefas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold" href="index.html">TaskFlow</a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link  active" href="tarefas.html">Tarefas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro.html">Nova Tarefa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-4 bg-light border-bottom mb-4">
+        <div class="container text-center">
+            <h1 class="fw-bold" style="color: #a4133c;">📋 Minhas Tarefas</h1>
+            <p class="text-muted">Gerencie, edite e acompanhe o progresso das suas atividades.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto text-center">
+                <div class="btn-group w-100 shadow-sm" role="group" aria-label="Filtros de tarefas">
+                    <button type="button" class="btn btn-outline-primary active" onclick="filtrarTarefas('todas')">Todas</button>
+                    <button type="button" class="btn btn-outline-warning" onclick="filtrarTarefas('pendente')">⏳ Pendentes</button>
+                    <button type="button" class="btn btn-outline-success" onclick="filtrarTarefas('concluida')">✅ Concluídas</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="listaTarefas">
+            <div class="col-12 text-center py-5" id="emptyState">
+                <div class="display-1 text-muted opacity-25 mb-3">📂</div>
+                <h3 class="text-muted">Nenhuma tarefa encontrada</h3>
+                <p>Que tal começar criando uma nova atividade?</p>
+                <a href="cadastro.html" class="btn btn-salvar text-white mt-2">Criar Minha Primeira Tarefa</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-4 bg-light">
+        <p class="text-muted mb-0 small">TaskFlow • 2026</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

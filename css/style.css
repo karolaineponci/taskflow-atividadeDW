@@ -1,0 +1,85 @@
+:root {
+    --primary: #127369;
+    --primary-dark: #10403B;
+    --bg-light: #f3fcf9;
+    --card-border: #BFBFBF;
+    --text-main: #333333;
+    --accent-red: #BF2626;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.navbar {
+    background-color: var(--primary-dark) !important;
+    padding: 1rem 0;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.8) !important;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #FFFFFF !important;
+    text-decoration: underline;
+}
+
+.card {
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: #FFFFFF;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.btn-salvar {
+    background-color: var(--primary) !important;
+    border: none;
+    padding: 10px 25px;
+    font-weight: 600;
+}
+
+.btn-salvar:hover {
+    background-color: var(--primary-dark) !important;
+}
+
+.btn-outline-danger {
+    color: var(--accent-red);
+    border-color: var(--accent-red);
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--accent-red);
+    color: white;
+}
+
+.form-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-header {
+    background-color: var(--primary);
+    color: white;
+    padding: 20px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(18, 115, 105, 0.25);
+}
+
+.text-primary-custom {
+    color: var(--primary-dark);
+}
